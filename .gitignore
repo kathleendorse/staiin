@@ -38,6 +38,9 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
+# production
+/build
+
 # Dependency directories
 node_modules/
 jspm_packages/
@@ -47,6 +50,7 @@ web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
+next-env.d.ts
 
 # Optional npm cache directory
 .npm
@@ -78,6 +82,8 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+.env*.local
+
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -128,3 +134,16 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# vercel
+.vercel
+
+# misc
+.DS_Store
+*.pem
+
+# dependencies
+/.pnp
+
+# testing
+/coverage

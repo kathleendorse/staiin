@@ -1,0 +1,40 @@
+{
+    "pages": [
+        {
+            "route": "/",
+            "name": "home"
+        },
+        {
+            "route": "/about",
+            "name": "about"
+        },
+        {
+            "route": "/photo",
+            "name": "photo"
+        },
+        {
+            "route": "/creative-direction",
+            "name": "creative direction"
+        },
+        {
+            "route": "/film",
+            "name": "film"
+        },
+        {
+            "route": "/makeup",
+            "name": "makeup"
+        },
+        {
+            "route": "/design",
+            "name": "design"
+        },
+        {
+            "route": "/exhibitions",
+            "name": "exhibitions"
+        },
+        {
+            "route": "/contact",
+            "name": "contact"
+        }
+    ]
+}
