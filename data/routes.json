@@ -17,6 +17,10 @@
             "name": "creative direction"
         },
         {
+            "route": "/shop",
+            "name": "shop"
+        },
+        {
             "route": "/film",
             "name": "film"
         },

@@ -10,9 +10,17 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { usePathname, useRouter } from 'next/navigation';
-import routes from '@/data/routes.json'
+import routes from '../data/routes.json';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#1976d2',
+    },
+  },
+});
 
 interface NavItemProps {
   title: string;
@@ -52,8 +60,11 @@ const NavItem = ( {title, onClick} : NavItemProps ) => {
   const currentPage = usePathname();
 
   return (
-      <AppBar position="static" sx={{minHeight: 150,}}>
-        <Toolbar sx={{backgroundColor:'black'}}>
+    <ThemeProvider theme={darkTheme}>
+      <AppBar position="static" sx={{minHeight: 150, backgroundColor:'black'}}>
+        <Toolbar 
+        sx={{backgroundColor:'black'}}
+        >
           {currentPage !== "/" && (
             <IconButton
               size="large"
@@ -111,12 +122,13 @@ const NavItem = ( {title, onClick} : NavItemProps ) => {
               </Menu>
             </div>
         </Toolbar>
-        <Box  component="div" sx={{ flexGrow: 1,  justifyContent:'center', textAlign:'center', alignItems:'center',  }}>
+        <Box  component="div" sx={{ flexGrow: 1,  justifyContent:'center', textAlign:'center', alignItems:'center', backgroundColor:'black' }}>
             <Box sx={{ flexGrow:1, alignSelf:'center', height: '100%'}}>
               {`[ LOGO ]`}
             </Box>
           </Box>
       </AppBar>
+      </ThemeProvider>
   );
 }
 
